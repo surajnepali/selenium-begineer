@@ -1,5 +1,5 @@
 import java.time.Duration;
-// import org.testng.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,7 +25,8 @@ public class AppTest {
         Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id=\"menu-button-13\"]")).click();
         driver.findElement(By.xpath("//button[@data-index='3']")).click(); // #menu-button-13
-        // Assert.assertEquals(, "");
+        Thread.sleep(3000);
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"bundle-courses\"]/div[1]/div/div[1]/h1")).getText(), "Bundle Courses");
         // driver.close();
 
         //CSS Selectors 
